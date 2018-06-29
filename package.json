@@ -1,0 +1,18 @@
+{
+  "name": "lunaebot",
+  "version": "1.0.0",
+  "description": "A twitchbot",
+  "main": "api.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aureus-Lunae/lunaebot"
+  },
+  "author": "Aureus Lunae",
+  "license": "MIT",
+  "dependencies": {
+    "tmi.js": "^1.2.1"
+  }
+}
