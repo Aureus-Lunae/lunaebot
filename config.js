@@ -6,11 +6,11 @@ const options = {
 		reconnect: true
 	},
 	identity: {
-			username: 'Lunaebot',
-			password: 'oauth:o1qm3lybdqm2vxxavfmzcieugdix0j'
+			username: 'bot twitch account',
+			password: 'oauth:'
 	},
 	channels: [
-		'#Aureus_Lunae'
+		'#channelname'
 	]
 }
 
