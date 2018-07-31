@@ -27,7 +27,7 @@ identity: {
 For example:
 identity: {
 			username: 'Lunaebot',
-			password: 'oauth:9753123sadihfjsan54'
+			password: 'oauth:samplekey98177'
 	},
 
 # Starting the bot
