@@ -24,14 +24,20 @@ exports.printwhisper = function (user, result) {
 
 luna.on("chat", function(channel, userstate, message, self) {
 	if (self) return;
-	
-	commands.command(channel, userstate, message, self);
+	if (message.charAt(0) === "!")
+	{
+		commands.command(channel, userstate, message, self);
+	}
 
 });
 
 luna.on("whisper", function(channel, userstate, message, self) {
 	if (self) return;
 	
-	commands.whisper(userstate, message, self);
+	if (message.charAt(0) === "!")
+	{
+		commands.whisper(userstate, message, self);
+	}
+
 
 });
