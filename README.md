@@ -1,5 +1,8 @@
-# lunaebot
-A nodejs twitchbot made by Aureus Lunae.
+# Lunaebot
+A nodejs twitchbot made by Aureus Lunae. For now it has the following features:
+Pokémon Moves Lookup
+/metronome
+Custom Commands
 
 # Installation
 This bot use nodejs. We recommend you to install this first. You can download it here: https://nodejs.org/en/
