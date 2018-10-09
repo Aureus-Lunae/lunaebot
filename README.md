@@ -11,6 +11,7 @@ After installing, download the bot.
 
 In the bot folder, open the terminal/command prompt and type the following:
 npm i tmi.js --save
+
 Wait till it is finished, then type the following to make the databases work:
 npm install sqlite3
 
