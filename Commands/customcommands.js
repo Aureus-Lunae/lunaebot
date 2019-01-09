@@ -14,22 +14,22 @@ const openCustomCommandsDatabase = function() {
 const listcommands = function(channel, callback) {
 
 	const cc = openCustomCommandsDatabase();
-
-	cc.serialize(function() {
-		cc.each(`SELECT Command FROM CustomCommands`, (err, row) => {
+		cc.all(`SELECT Command FROM CustomCommands`, (err, rows) => {
 			if (err) {
     			console.log(err);
     			return;
 			}
-
-			allcustomcommands.push(row);
-			}, function(err, count) {
+			allcustomcommands = [];
+			rows.forEach(function (row) {
+				allcustomcommands.push(row.Command);
+				console.log(row);
+				console.log(allcustomcommands);
+			});
 
 			callback(channel,`This channel has the following custom commands: ${allcustomcommands}`);
 			cc.close();
-		});
+			});
 
-	});
 
 }
 
@@ -109,9 +109,9 @@ exports.edit = function(channel, msg, command, user, callback) {
 		case `delete`:
 			deletecommand(channel, msg, command, callback);
 			break;
-		/* case `list`:
+		case `list`:
 			listcommands(channel,callback); 
-			break; */
+			break; 
 		default:
 			callback(channel,`Please use list, add or delete`);
 			break;
@@ -134,7 +134,7 @@ exports.custom = function(channel, msg, callback) {
       		if (!row) {
       			return;
       		} else {
-      			var ccresponse = row.Response;
+      			let ccresponse = row.Response;
       			callback(channel, ccresponse);
       		}
 
